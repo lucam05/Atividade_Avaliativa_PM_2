@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package pm_prova2_m;
+
 
 /**
  *
@@ -15,7 +15,7 @@ public abstract class Veiculo {
     private int anoFabricacao;
     private double valorDiaria;
     private double quilometragem;
-    private StatusVeiculo status;
+    protected StatusVeiculo status;
 
     public Veiculo(String placa, String modelo, int anoFabricacao, double valorDiaria,double quilometragem, StatusVeiculo status) {
 
@@ -24,7 +24,7 @@ public abstract class Veiculo {
         this.anoFabricacao = anoFabricacao;
         this.valorDiaria = valorDiaria;
         this.quilometragem = quilometragem;
-        this.status = status;
+        this.status = StatusVeiculo.DISPONIVEL;
     }
 
     public String getPlaca() {
@@ -77,7 +77,7 @@ public abstract class Veiculo {
 
     public abstract void exibirDetalhes();
 
-    public abstract boolean possuiSeguroEspecial();
+    
     
 }
 
